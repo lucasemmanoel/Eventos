@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout hidden="true" title="Aplicação de Foto de Perfil - aconselhável não usar">
+		<message>
+			Aplicação de Foto de Perfil. Não funcionará como item de menu.
+		</message>
+	</layout>
+	<state>
+		<name>Aplicação de Foto de Perfil</name>
+		<description>Aplicação de Foto de Perfil.</description>
+	</state>
+</metadata>

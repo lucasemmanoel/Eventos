@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="Certificados">
+		<message>
+			Emitir certificado para usuário logado definindo o evento e tipo.
+		</message>
+	</layout>
+	<state>
+		<name>Emissão de Certificados.</name>
+		<description>Emitir certificado para usuário logado definindo o evento e tipo.</description>
+		<url addpath="/administrator/components/com_p22evento/elements">
+			<param name="idevento" type="evento" published="1" default="" label="Evento" description="Selecione o evento" />
+			<param name="cert" type="list" default="0" label="Tipo" description="Tipo de Certificado a ser emitiado.">
+				<option value="0">Participante</option>
+				<option value="1">Colaborador</option>
+			</param>
+		</url>
+	</state>
+</metadata>

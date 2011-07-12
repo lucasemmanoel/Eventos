@@ -1,0 +1,141 @@
+<?php
+/**
+ * @package		p22articumocupacao	
+ * @desc		Registros de ocupações de profissionais
+ * @author	    Hugo Seabra (hugo@porta22.com.br).
+ * @since		2010-03-23	
+ * @abstract	Exibe a relação de dados cadastrados no componente
+ */
+
+// Não permite o acesso direto ao arquivo.
+defined( '_JEXEC' ) or die( 'Restricted access' );
+
+// Recursos Joomla! para trabalhar com views.
+jimport( 'joomla.application.component.view' );
+
+class P22articumocupacaosViewP22articumocupacaos extends JView
+{
+	function display( $tpl = null )
+	{
+		// Monta título e menu
+		JToolBarHelper::title( JText::_( 'Gerenciador de p22articumocupacao' ), 'generic.png' );
+		JToolBarHelper::deleteList( );
+		JToolBarHelper::editListX( );
+		JToolBarHelper::addNewX( );
+
+		// Funcionalidades globais do Joomla!
+		global $mainframe;
+
+		// Conexão com a base de dados.
+		$db					= & JFactory::getDBO( );
+
+		// Contexto em que o usuário se encontra.
+		// Utilizado para guardar os dados escolhidos, no formulário, pelo usuário.
+		$context			= 'com_p22articumocupacao.p22articumocupacao.list.';
+
+		// Campo utilizado para ordenar os registros - default = nome.
+		$filter_order		= $mainframe->getUserStateFromRequest( $context . 'filter_order', 'filter_order', 'p.nome', 'cmd' );
+		// Ordem de exibição dos registros ( asc/desc ) - default = asc.
+		$filter_order_Dir	= $mainframe->getUserStateFromRequest( $context . 'filter_order_Dir' , 'filter_order_Dir', '', 'word' );
+
+		// filtro por nome
+		$filtro_nome		= $mainframe->getUserStateFromRequest( $context . 'filtro_nome', 'filtro_nome', '', 'string' );
+
+		// String utilizada para filtrar registros.
+		$search				= $mainframe->getUserStateFromRequest( $context . 'search', 'search', '', 'string' );
+
+		// Número de registros a serem exibidos.
+		$limit				= $mainframe->getUserStateFromRequest( 'global.list.limit', 'limit', $mainframe->getCfg( 'list_limit' ), 'int' );
+		$limitstart			= $mainframe->getUserStateFromRequest( $context . 'limitstart', 'limitstart', 0, 'int' );
+
+		// Array para filtro == WHERE ==.
+		$where				= array( );
+
+		// Filtro de nome que será passado ao modelo. == WHERE ==
+		if ( $filtro_nome )
+		{
+			$where[]		= "p.nome = '" . $filtro_nome . "'";
+		}
+
+		// Filtro do campo search ==== Neste caso nome ==== == WHERE ==
+		if ( $search )
+		{
+			$where[]		= ' LOWER( p.nome ) LIKE ' . $db->Quote( '%' . $db->getEscaped( $search, true ) . '%', false );
+		}
+
+		// Ajustando array do filtro para o modelo == WHERE ==.
+		if ( count( $where ) )
+		{
+			$where			= ' WHERE ' . implode( ' AND ', $where );
+		}
+		else
+		{
+			$where			= '';
+		}
+
+		// Cria a ordenação dos registros == ORDER BY ==.
+		$orderby			= ' ORDER BY ' . $filter_order . ' ' . $filter_order_Dir;
+
+		// Recupera modelo do banco de dados.
+		$model				= & $this->getModel( );
+
+		// Recupera número total de registros.
+		$totalRegistros		= & $model->totalRegistros( $where );
+
+		// Funcionalidades Joomla! para paginação de registros.
+		jimport( 'joomla.html.pagination' );
+		$pageNav			= new JPagination( $totalRegistros, $limitstart, $limit );
+		$paginacao			= $pageNav->getListFooter();
+
+		// Recupera registrosx do modelo.
+		$registros			= & $model->registros( $where, $orderby, $pageNav );
+
+		// Ordenação dos registros.
+		$lists[ 'order' ]		= $filter_order;
+		$lists[ 'order_Dir' ]	= $filter_order_Dir;
+
+		// Campo de Busca ==== Neste caso por destinatários ====.
+		$lists[ 'search' ]      = $search;
+
+		/*
+		 * O método JHTLM::_() possui um único parametro $type
+		 * Este é dividio em 2 ou 3 partes por pontos(.)
+		 * Os pontos separam: $pref, $file, $func, respectiviamente.
+		 * $pref possui valor default 'JHTML'
+		 * O metodo faz a chamada ao método do arquivo especificado pelo parametro
+		 * com os parametos extras do método _.
+		 * O metodo genericlist possui os seguintes parametros:
+		 * > array  $arr: An array of objects
+		 * > string $name: The value of the HTML name attribute
+		 * > string $attribs: Additional HTML attributes for the <select> tag
+		 * > string $key: The name of the object variable for the option value
+		 * > string $text: The name (\([!\ ][A-z]\))of the object variable for the option text
+		 * > mixed  $selected: The key that is selected (accepts an array or a string)
+		 * > $idtag
+		 * > $translate
+		 */
+	
+		// Filtro por Nome.
+		unset( $combo );
+		$combo[]				= JHTML::_( 'select.option',  '', '- Nome -', 'value', 'text' );
+		$combo					= array_merge( $combo, $this->get( 'Nomes' ) );
+		$attribs				= 'class="inputbox" onchange="document.searchadminForm.submit();"';
+		$lists[ 'filtro_nome' ] = JHTML::_(
+			'select.genericlist', // Chamada o arquivo select, método genericlist
+			$combo, // array de dados
+			'filtro_nome', // name da select gerada
+			$attribs, // outros atributos html da tag
+			'value', // nome do campo de valor do select
+			'text', // nome do campo de texto do select
+			$filtro_nome// valor default do select
+		);
+
+		// Prepara os dados para o template.
+		$this->assignRef( 'registros', $registros );
+		$this->assignRef( 'lists', $lists );
+		$this->assignRef( 'paginacao', $paginacao );
+
+		// Carrega o template.
+		parent::display( $tpl );
+	}
+}

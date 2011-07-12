@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="Validação de Certificados">
+		<message>
+			Validação de certificado.
+		</message>
+	</layout>
+	<state>
+		<name>Validação de Certificados</name>
+		<description>Validação de certificado.</description>
+		<url>
+		</url>
+	</state>
+</metadata>

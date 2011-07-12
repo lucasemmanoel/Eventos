@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="Eventos">
+		<message>
+			Relação de eventos disponíveis.
+		</message>
+	</layout>
+	<state>
+		<name>Events</name>
+		<description>Relação de eventos disponíveis.</description>
+		<url>
+		</url>
+	</state>
+</metadata>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="Perfil">
+		<message>
+			Perfil de Participante logado.
+		</message>
+	</layout>
+	<state>
+		<name>Perfil</name>
+		<description>Perfil de Participante logado.</description>
+		<url>
+		</url>
+	</state>
+</metadata>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="Avaliação de Palestras - não usar">
+		<message>
+			Resultado final de avaliação de Palestras. Não funcionará como item de menu.
+		</message>
+	</layout>
+	<state>
+		<name>Avaliação de Palestras</name>
+		<description>Resultado final de avaliação de Palestras.</description>
+	</state>
+</metadata>

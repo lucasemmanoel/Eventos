@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="Painel">
+		<message>
+			Opções de funcionalidades de eventos.
+		</message>
+	</layout>
+	<state>
+		<name>Opções de funcionalidades de eventos.</name>
+		<description>Opções de funcionalidades de eventos.</description>
+		<url addpath="/administrator/components/com_p22evento/elements">
+			<param name="idevento" type="evento" published="1" default="" label="Evento" description="Selecione o evento" />
+		</url>
+	</state>
+</metadata>

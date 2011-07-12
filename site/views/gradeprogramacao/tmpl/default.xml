@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="Grade de Programação">
+		<message>
+			Grade de programação a partir da seleção de um evento.
+		</message>
+	</layout>
+	<state>
+		<name>Grade de Programação.</name>
+		<description>PGrade de programação a partir da seleção de um evento..</description>
+		<url addpath="/administrator/components/com_p22evento/elements">
+			<param name="idevento" type="evento" published="1" default="" label="Evento" description="Selecione o evento" />
+		</url>
+	</state>
+</metadata>
