@@ -123,11 +123,11 @@ function changeImgAvatar( id , nome_img )
 
 		if( vr[0] == 'resize' )
 		{
-			src = './images/stories/eventos/avatar/' + id + '/' + nome_img;
+			src = '/./images/stories/eventos/avatar/' + id + '/' + nome_img;
 		}
 		else
 		{
-			src = './administrator/components/com_p22evento/images/no_picture.jpg';
+			src = '/./administrator/components/com_p22evento/images/no_picture.jpg';
 		}
 	}
 	else

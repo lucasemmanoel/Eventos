@@ -85,7 +85,7 @@ function FormataCpf(campo, teclapres)
 function ValidarCPF(Objcpf)
 {
 	var cpf = Objcpf.value;
-	exp = /\.|\-/g
+	var exp = /\.|\-/g
 	cpf = cpf.toString().replace( exp, "" );
 	var digitoDigitado = eval(cpf.charAt(9)+cpf.charAt(10));
 	var soma1=0, soma2=0;

@@ -148,7 +148,7 @@ $avatar_img		= ( $seImgExists ) ? '../' . $this->registro->avatar_img : 'compone
 							<tr>
 								<td class="key">
 									<label for="nome">
-										<?php echo JText::_( 'Nome da Palestra' ); ?>:
+										<?php echo JText::_( 'Nome da Trilha' ); ?>:
 									</label>
 								</td>
 								<td>

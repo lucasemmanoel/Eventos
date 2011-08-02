@@ -292,6 +292,10 @@ div.current dd {
 	margin-right: 5px;
 	float: left;
 	margin-bottom: 5px;
+	background: none !important;
+	width: auto !important;
+	height: auto !important;
+	margin-left: auto!important;
 }
 
 #cpanel div.icon a {

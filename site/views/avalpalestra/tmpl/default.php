@@ -63,7 +63,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	}
 	// -->
 </script>
-<div class="padding" style="width:99%;margin-left:auto;margin-right: auto;margin-top:5px">
+<div style="width:82%">
 	<div id="toolbar-box">
 		<div class="t">
 			<div class="t">
@@ -94,14 +94,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				Palestra: <span style="color:#333;font-size: 14px"><?php echo $this->registro->nome; ?></span>
 			</div>
 			<?php if ( $this->registro->resumo ) : ?>
-			<div style="padding:10px;font-size: 12px;margin-left:20px;border:1px solid #DDD;margin-bottom:10px;width:96%;background-color:#F7F7F7">
+			<div style="padding:10px;font-size: 12px;margin-left:5px;border:1px solid #DDD;margin-bottom:10px;background-color:#F7F7F7">
 				<?php echo nl2br( $this->registro->resumo ); ?>
 			</div>
 			<?php endif; ?>
 
 			<?php if ( $this->registro->avaliar ) { ?>
 			<form action="<?php echo JRoute::_('index2.php?option=com_p22evento&task=avalpalestra&idevento='. intval( $this->idevento ) .'&palestraid='. JRequest::getInt('palestraid') .'&Itemid=' . JRequest::getInt('Itemid') ); ?>" method="post" id="josForm" name="josForm" class="form-validate">
-				<div class="col100">
+				<div>
 					<fieldset class="adminform">
 						<table class="admintable" border="0" width="100%">
 							<tr>

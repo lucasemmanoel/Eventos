@@ -50,9 +50,12 @@ class P22eventosViewSelevento extends JView
 		$doc		= &JFactory::getDocument();
 		$user		= &JFactory::getUser();
 		$doc->addScript('includes/js/joomla.javascript.js');
+//		$doc->addScript('components/com_p22evento/assets/js/pane.js');
 		$doc->addStyleSheet( 'components/com_p22evento/assets/css/com_p22eventos.css' );
 		$doc->addStyleSheet( 'templates/system/css/system.css' );
 		$doc->addStyleSheet( 'templates/system/css/general.css' );
+
+//		$doc->addScriptDeclaration( $js );
 
 		$pathway->addItem( $eventName );
 

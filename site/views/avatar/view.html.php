@@ -78,8 +78,9 @@ class P22eventosViewAvatar extends JView
 					$current_large_image_width	= $model->getWidth( $model->filepath );
 					$current_large_image_height = $model->getHeight( $model->filepath );
 
-					$expFile	= array_filter( explode( DS , $model->filepath ) );
-					$filepath	= $expFile[4] . DS . $expFile[5] . DS. $expFile[6] . DS. $expFile[7] . DS. $expFile[8] . DS. $expFile[9];
+					$filepath	= str_replace( JPATH_SITE . DS , '' , $model->filepath );
+//					$expFile	= array_filter( explode( DS , $model->filepath ) );
+//					$filepath	= $expFile[4] . DS . $expFile[5] . DS. $expFile[6] . DS. $expFile[7] . DS. $expFile[8] . DS. $expFile[9];
 				}
 			}
 			elseif( $post['act'] == 'upload_thumb' )

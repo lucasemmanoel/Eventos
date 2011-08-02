@@ -248,7 +248,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 <style type="text/css">
 	.icon-48-p22Inscritos{ background-image: url('administrator/components/com_p22evento/images/inscritos.png') }
 </style>
-<div class="padding" style="width:99%;margin-left:auto;margin-right: auto;margin-top:5px">
+<div class="padding" style="width:<?php echo ( JREquest::getCmd('tmpl') ) ? 82 : 99; ?>%;margin-top:5px">
 	<?php if ( !$tmpl ) : ?>
 	<div id="toolbar-box">
 		<div class="t">

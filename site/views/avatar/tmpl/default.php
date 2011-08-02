@@ -30,22 +30,23 @@ if( strlen( $this->image ) > 0 )
 	window.parent.changeImgAvatar( '<?php echo JRequest::getInt('pid'); ?>' , '<?php echo $this->image; ?>' );
 	window.parent.document.getElementById('sbox-window').close();
 <?php else: ?>
-function preview(img, selection) {
+function preview(img, selection)
+{
 	var scaleX = '<?php echo $this->thumb_width;?>' / selection.width;
 	var scaleY = '<?php echo $this->thumb_height;?>' / selection.height;
 
-	$('#thumbnail + div > img').css({
+	jQuery('#thumbnail + div > img').css({
 		width: Math.round(scaleX * <?php echo $this->current_large_image_width;?>) + 'px',
 		height: Math.round(scaleY * <?php echo $this->current_large_image_height;?>) + 'px',
 		marginLeft: '-' + Math.round(scaleX * selection.x1) + 'px',
 		marginTop: '-' + Math.round(scaleY * selection.y1) + 'px'
 	});
-	$('#x1').val(selection.x1);
-	$('#y1').val(selection.y1);
-	$('#x2').val(selection.x2);
-	$('#y2').val(selection.y2);
-	$('#w').val(selection.width);
-	$('#h').val(selection.height);
+	jQuery('#x1').val(selection.x1);
+	jQuery('#y1').val(selection.y1);
+	jQuery('#x2').val(selection.x2);
+	jQuery('#y2').val(selection.y2);
+	jQuery('#w').val(selection.width);
+	jQuery('#h').val(selection.height);
 }
 
 function enviar( act )
@@ -86,17 +87,19 @@ function enviar( act )
 	document.getElementById('del_image').disabled	= true;
 
 	if( act )
+	{
 		document.thumbnail.submit();
+	}
 }
 
-$(window).load(function () {
+Window.onDomReady(function() {
 	window.parent.changeImgAvatar( '<?php echo JRequest::getInt('pid'); ?>' , '<?php echo $this->image; ?>' );
-	$('#thumbnail').imgAreaSelect({ aspectRatio: '1:<?php echo $this->thumb_height/$this->thumb_width; ?>', onSelectChange: preview });
+	jQuery('#thumbnail').imgAreaSelect({ aspectRatio: '1:<?php echo $this->thumb_height/$this->thumb_width; ?>', onSelectChange: preview });
 });
 <?php endif; ?>
 </script>
 <?php } ?>
-<div class="col100">
+<div style="width:82%;margin-top:5px">
 	<fieldset class="adminform">
 		<legend><?php echo JText::_( 'Novo Arquivo' ); ?></legend>
 		<div id="campo_file">
@@ -118,7 +121,7 @@ $(window).load(function () {
 		</div>
 	</fieldset>
 </div>
-<div class="col100">
+<div style="width:82%;margin-top:5px">
 	<fieldset class="adminform">
 		<legend><?php echo JText::_( 'Definir Imagem' ); ?></legend>
 		<div id="campo_imagem">

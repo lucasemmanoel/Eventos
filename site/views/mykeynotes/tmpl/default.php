@@ -25,7 +25,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <style type="text/css">
 	.icon-48-p22Palestras{ background-image: url('administrator/components/com_p22evento/images/palestras.png') }
 </style>
-<div class="padding" style="width:99%;margin-left:auto;margin-right: auto;margin-top:5px">
+<div style="width:82%">
 	<div id="toolbar-box">
 		<div class="t">
 			<div class="t">
