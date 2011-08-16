@@ -245,7 +245,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	}
 </script>
 <style type="text/css">
-	.icon-48-p22Inscritos{ background-image: url('administrator/components/com_p22evento/images/inscritos.png') }
+	.icon-48-p22Inscritos{ background-image: url('/./administrator/components/com_p22evento/images/inscritos.png') }
 </style>
 <div class="padding" style="width:99%;margin-left:auto;margin-right: auto;margin-top:5px">
 	<div id="toolbar-box">

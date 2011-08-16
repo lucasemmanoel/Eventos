@@ -52,12 +52,12 @@ $link_profile	= $expLink[0];
 	margin:-2px 0px 0px 5px;
 	width:112px;
 	height:42px;
-	background:url( components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $orkut_w; ?>px <?php echo $orkut_h; ?>px;
+	background:url( /./.components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $orkut_w; ?>px <?php echo $orkut_h; ?>px;
 	cursor:pointer;
 }
 
 #icon_orkut:hover {
-	background:url( components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $orkut_hover; ?>px <?php echo $orkut_h; ?>px;
+	background:url( /./components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $orkut_hover; ?>px <?php echo $orkut_h; ?>px;
 }
 
 #icon_twitter {
@@ -65,12 +65,12 @@ $link_profile	= $expLink[0];
 	margin:-2px 0px 0px 135px;
 	width:112px;
 	height:42px;
-	background:url( components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $twitter_w; ?>px <?php echo $twitter_h; ?>px;
+	background:url( /./components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $twitter_w; ?>px <?php echo $twitter_h; ?>px;
 	cursor:pointer;
 }
 
 #icon_twitter:hover {
-	background:url( components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $twitter_hover; ?>px <?php echo $twitter_h; ?>px;
+	background:url( /./components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $twitter_hover; ?>px <?php echo $twitter_h; ?>px;
 }
 
 #icon_youtube {
@@ -78,12 +78,12 @@ $link_profile	= $expLink[0];
 	margin:-2px 0px 0px 265px;
 	width:112px;
 	height:45px;
-	background:url( components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $youtube_w; ?>px <?php echo $youtube_h; ?>px;
+	background:url( /./components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $youtube_w; ?>px <?php echo $youtube_h; ?>px;
 	cursor:pointer;
 }
 
 #icon_youtube:hover {
-	background:url( components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $youtube_hover; ?>px <?php echo $youtube_h; ?>px;
+	background:url( /./components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $youtube_hover; ?>px <?php echo $youtube_h; ?>px;
 }
 
 #icon_blog {
@@ -91,12 +91,12 @@ $link_profile	= $expLink[0];
 	margin:-2px 0px 0px 395px;
 	width:112px;
 	height:45px;
-	background:url( components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $blog_w; ?>px <?php echo $blog_h; ?>px;
+	background:url( /./components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $blog_w; ?>px <?php echo $blog_h; ?>px;
 	cursor:pointer;
 }
 
 #icon_blog:hover {
-	background:url( components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $blog_hover; ?>px <?php echo $blog_h; ?>px;
+	background:url( /./components/com_p22evento/assets/images/sociais.png ) no-repeat <?php echo $blog_hover; ?>px <?php echo $blog_h; ?>px;
 }
 </style>
 <script type="text/javascript">
@@ -132,7 +132,7 @@ function changeImgAvatar( id , nome_img )
 	}
 	else
 	{
-		src = './administrator/components/com_p22evento/images/no_picture.jpg';
+		src = '/./administrator/components/com_p22evento/images/no_picture.jpg';
 	}
 	img += ' src="'+ src +'" alt="" width="180px" />';
 	document.getElementById('campo_img_avatar').innerHTML = img;
@@ -183,9 +183,9 @@ Window.onDomReady(function() {
 			<td id="td_avatar" width="15%" valign="top" rowspan="<?php echo ( !JRequest::getVar('tmpl') ) ? 3 : 1; ?>" class="perfil_td_avatar" style="height:180px" onmouseover="showHideLinkAvatar('show')" onmouseout="showHideLinkAvatar('hide')">
 				<div style="float:left" id="campo_img_avatar">
 					<?php if( $this->registro->avatar_img && is_file( $this->registro->avatar_img ) ) : ?>
-						<img src="./<?php echo $this->registro->avatar_img; ?>" alt="" width="180px" />
+						<img src="/./<?php echo $this->registro->avatar_img; ?>" alt="" width="180px" />
 					<?php else: ?>
-						<img src="./administrator/components/com_p22evento/images/no_picture.jpg" alt="" />
+						<img src="/./administrator/components/com_p22evento/images/no_picture.jpg" alt="" />
 					<?php endif; ?>
 				</div>
 				<?php if ( !$this->user->guest && $this->user->id == $this->registro->id_user ) : ?>
@@ -222,7 +222,7 @@ Window.onDomReady(function() {
 						<strong>Profissão:</strong> <span id="profissao_field"><?php echo $this->registro->profissao; ?></span>
 					</div>
 					<div style="margin-top:10px">
-						<div id="curriculo_div_field" style="border:1px solid #DDD;background-color:#F7F7F7;float:left;width:490px;margin-left:auto;margin-right:auto;max-height:300px;overflow:hidden;padding:10px;display:<?php echo ( !$this->registro->curriculo ) ? 'none' : ''; ?>">
+						<div id="curriculo_div_field" style="border:1px solid #DDD;background-color:#F7F7F7;float:left;width:395px;margin-left:auto;margin-right:auto;max-height:300px;overflow:hidden;padding:10px;display:<?php echo ( !$this->registro->curriculo ) ? 'none' : ''; ?>">
 							<div><strong>Mini-currículo:</strong></div>
 							<div style="margin-left:20px" id="curriculo_field"><?php echo nl2br( $this->registro->curriculo ); ?></div>
 						</div>
@@ -421,9 +421,13 @@ Window.onDomReady(function() {
 								<?php endif; ?>
 							</td>
 							<td width="50%">
+								<?php if ( !$this->user->guest && $this->user->id == $this->registro->id_user ) : ?>
 								<a class="modal" rel="{handler: 'iframe', size: {x: 800, y: 480}}" href="<?php echo JRoute::_( 'index2.php?option=com_p22evento&task=avaliacao&idevento='. intval( $row->id_evento ) .'&palestraid='. intval( $row->id ) .'&direct=1&Itemid=' . JRequest::getInt('Itemid') ); ?>">
 									<?php echo $row->nome; ?>
 								</a>
+								<?php else: ?>
+									<?php echo $row->nome; ?>
+								<?php endif; ?>
 							</td>
 							<?php if ( !$this->user->guest && $this->user->id == $this->registro->id_user ) : ?>
 							<td width="10%" align="center">
@@ -479,7 +483,7 @@ Window.onDomReady(function() {
 								<?php if ( count( $this->inscritoEventos ) ) : ?>
 									<?php if ( ( $row->inscricoes && !in_array( 0 , $this->inscritoEventos[ $row->id ] ) && !in_array( 1 , $this->inscritoEventos[ $row->id ] ) && !in_array( 2 , $this->inscritoEventos[ $row->id ] ) ) || ( $row->colaboradores && !in_array( 1 , $this->inscritoEventos[ $row->id ] ) ) || ( $row->palestras || $row->minicursos ) ) : ?>
 										<div style="font-weight:bold;margin-bottom:5px" align="left">
-											Cadastrar-se:
+											Cadastrar:
 										</div>
 										<?php if ( $row->inscricoes && !in_array( 0 , $this->inscritoEventos[ $row->id ] ) && !in_array( 1 , $this->inscritoEventos[ $row->id ] ) ) : ?>
 										<div id="button_0">
@@ -498,13 +502,13 @@ Window.onDomReady(function() {
 											<button style="width:165px" class="button" onclick="registerUser(2 , <?php echo $row->id; ?> , <?php echo $this->registro->id; ?>)">Como Palestrante</button>
 										</div>
 										<?php endif; ?>
-										<a id="link_2" class="modal" rel="{handler: 'iframe', size: {x: 800, y: 480}}" href="<?php echo JRoute::_('index2.php?option=com_p22evento&task=mykeynotes&idevento='. $row->id .'&Itemid=' . JRequest::getInt('Itemid') ); ?>"style="width:165px;display:<?php echo ( !in_array( 2 , $this->inscritoEventos[ $row->id ] ) ) ? 'none': ''; ?>">
+										<a id="link_2" class="modal" rel="{handler: 'iframe', size: {x: 800, y: 480}}" href="<?php echo JRoute::_('index.php?option=com_p22evento&task=mykeynotes&tmpl=component&idevento='. $row->id .'&Itemid=' . JRequest::getInt('Itemid') ); ?>"style="width:165px;display:<?php echo ( !in_array( 2 , $this->inscritoEventos[ $row->id ] ) ) ? 'none': ''; ?>">
 											Palestras / Minicursos
 										</a>
 									<?php endif; ?>
 								<?php else: ?>
 									<div style="font-weight:bold;margin-bottom:5px" align="left">
-										Cadastrar-se:
+										Cadastrar:
 									</div>
 									<div id="button_0">
 										<button style="width:165px" class="button" onclick="registerUser(0 , <?php echo $row->id; ?> , <?php echo $this->registro->id; ?>)">Como Participante</button>
@@ -517,7 +521,7 @@ Window.onDomReady(function() {
 									<div id="button_2">
 										<button style="width:165px" id="button_2" class="button" onclick="registerUser(2 , <?php echo $row->id; ?> , <?php echo $this->registro->id; ?>)">Como Palestrante</button>
 									</div>
-									<a id="link_2" class="modal" rel="{handler: 'iframe', size: {x: 800, y: 480}}" href="<?php echo JRoute::_('index2.php?option=com_p22evento&task=mykeynotes&idevento='. $row->id .'&Itemid=' . JRequest::getInt('Itemid') ); ?>"style="width:165px;display:<?php echo ( !in_array( 2 , $this->inscritoEventos[ $row->id ] ) ) ? 'none': ''; ?>">
+									<a id="link_2" class="modal" rel="{handler: 'iframe', size: {x: 800, y: 480}}" href="<?php echo JRoute::_('index2.php?option=com_p22evento&task=mykeynotes&tmpl=component&idevento='. $row->id .'&Itemid=' . JRequest::getInt('Itemid') ); ?>"style="width:165px;display:<?php echo ( !in_array( 2 , $this->inscritoEventos[ $row->id ] ) ) ? 'none': ''; ?>">
 										Palestras / Minicursos
 									</a>
 								<?php endif; ?>

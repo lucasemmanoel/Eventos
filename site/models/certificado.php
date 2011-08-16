@@ -125,10 +125,18 @@ class P22eventosModelCertificado extends JModel
 		$where[]	= 'p.id_participante=' . intval( $this->id );
 		$where[]	= 'p.nome=' . $this->lib->db->Quote( $this->_registro->nome );
 		$where[]	= 'p.cpf=' . intval( $this->_registro->cpf );
+
+		$palestraid	= JRequest::getInt('palestraid');
+
+		if( $palestraid )
+		{
+			$where[]	= 'p.id_palestra=' . intval( $palestraid );
+		}
+
 		$where		= ' WHERE ' . implode( ' AND ' , $where );
 		$check		= $this->lib->getDados( 'p22eventos_certificados_data' , 'p.id' , $where , '' , 'loadResult' );
 
-		$this->_registro->id_certificado = intval( $check );
+		$this->_registro->id_certificado = $check;
 
 		return ( $check > 0 ) ? false : true;
 	}

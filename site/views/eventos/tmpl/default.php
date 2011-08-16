@@ -23,8 +23,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 <style type="text/css">
-	.icon-48-p22Eventos{ background-image: url('administrator/components/com_p22evento/images/eventos.png') }
-	.icon-32-search{ background-image: url('components/com_p22evento/assets/images/toolbar/icon-32-search.png') }
+	.icon-48-p22Eventos{ background-image: url('/./administrator/components/com_p22evento/images/eventos.png') }
+	.icon-32-search{ background-image: url('/./components/com_p22evento/assets/images/toolbar/icon-32-search.png') }
 </style>
 <div class="padding" style="width:99%;margin-left:auto;margin-right: auto;margin-top:5px">
 	<div id="toolbar-box">

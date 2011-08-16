@@ -24,7 +24,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 <style type="text/css">
-.icon-48-p22Avaliacao{ background-image: url('administrator/components/com_p22evento/images/avaliacao.png') }
+.icon-48-p22Avaliacao{ background-image: url('/./administrator/components/com_p22evento/images/avaliacao.png') }
 </style>
 <script language="javascript" type="text/javascript">
 	<!--

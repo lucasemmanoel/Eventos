@@ -62,6 +62,7 @@ window.addEvent('domready', function()	{
 });
 </script>
 <style type="text/css">
+.rt-container { width: 100% !important; }
 div.field_palestra {
 	opacity: 0.7;
 }
@@ -79,12 +80,12 @@ div.field_palestra:hover {
 <div id="desc_pop" style="display:none;background-color: #EEF9AE;border:5px solid #E0F279;float:right;width:400px;position:fixed;right:10px;top:10px;z-index:10">
 	<div id="dados_box_desc" style="display:none"></div>
 	<div id="dados_box_loader" style="height:280px" align="center">
-		<img src="./components/com_p22evento/assets/images/loader_green.gif" alt="" style="margin-top:100px" />
+		<img src="/./components/com_p22evento/assets/images/loader_green.gif" alt="" style="margin-top:100px" />
 		<br />
 		Aguarde o carregamento...
 	</div>
 </div>
-<div style="padding:10px;font-size:12px" id="top">
+<div style="padding:10px;font-size:12px;color:#000" id="top">
 	<div style="padding:10px">
 		Salas, dias e horários estão sujeitos a alterações, de acordo com os critérios da organização do <strong><em><?php echo $this->eventName; ?></em></strong>
 		<br /><br />
@@ -96,7 +97,7 @@ div.field_palestra:hover {
 			<strong>ÍCONES:</strong>
 		</div>
 		<div style="float:left;margin-left:25px">
-			<img src="./components/com_p22evento/assets/images/palestras.png" alt="" />
+			<img src="/./components/com_p22evento/assets/images/palestras.png" alt="" />
 		</div>
 		<div style="float:left;font-weight:bold;margin-left:5px;margin-top:4px">
 			<a href="#div_tipo_<?php echo $this->tipo[0]; ?>" style="text-decoration: none">
@@ -104,7 +105,7 @@ div.field_palestra:hover {
 			</a>
 		</div>
 		<div style="float:left;margin-left:25px">
-			<img src="./components/com_p22evento/assets/images/minicursos.gif" alt="" />
+			<img src="/./components/com_p22evento/assets/images/minicursos.gif" alt="" />
 		</div>
 		<div style="float:left;font-weight:bold;margin-left:5px;margin-top:4px">
 			<a href="#div_tipo_<?php echo $this->tipo[1]; ?>" style="text-decoration: none">
@@ -157,7 +158,7 @@ div.field_palestra:hover {
 			<div id="div_tipo_<?php echo $this->tipo[ $tipo ]; ?>">
 				<div>
 					<div style="float:left;margin-top:14px">
-						<img src="./components/com_p22evento/assets/images/<?php echo $img; ?>" alt="" />
+						<img src="/./components/com_p22evento/assets/images/<?php echo $img; ?>" alt="" />
 					</div>
 					<div style="float:left;margin-left:10px">
 						<h2>

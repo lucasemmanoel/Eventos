@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 <style type="text/css">
-	.icon-48-p22Eventos{ background-image: url('./administrator/components/com_p22evento/images/eventos.png') }
+	.icon-48-p22Eventos{ background-image: url('/./administrator/components/com_p22evento/images/eventos.png') }
 </style>
 <div class="padding" style="width:99%;margin-left:auto;margin-right: auto;margin-top:5px">
 	<div id="toolbar-box">
@@ -64,7 +64,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 												<div style="float: left;">
 													<div class="icon">
 														<a href="<?php echo JRoute::_('index.php?option=com_p22evento&Itemid='. JRequest::getInt('Itemid') ); ?>">
-															<img alt="Voltar" src="./administrator/components/com_p22evento/images/back.png"><span>Voltar</span>
+															<img alt="Voltar" src="/./administrator/components/com_p22evento/images/back.png"><span>Voltar</span>
 														</a>
 													</div>
 												</div>
@@ -72,7 +72,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 												<div style="float: left;">
 													<div class="icon">
 														<a href="<?php echo JRoute::_('index.php?option=com_p22evento&task=subscribe&idevento='.$this->idevento.'&Itemid='. JRequest::getInt('Itemid') ); ?>">
-															<img alt="Inscrição" src="./administrator/components/com_p22evento/images/inscritos.png"><span>Inscrição</span>
+															<img alt="Inscrição" src="/./administrator/components/com_p22evento/images/inscritos.png"><span>Inscrição</span>
 														</a>
 													</div>
 												</div>
@@ -81,7 +81,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 												<div style="float: left;">
 													<div class="icon">
 														<a href="<?php echo JRoute::_('index.php?option=com_p22evento&task=colaborador&idevento='.$this->idevento.'&Itemid='. JRequest::getInt('Itemid') ); ?>">
-															<img alt="Colaboradores" src="./administrator/components/com_p22evento/images/inscritos.png"><span>Colaboradores</span>
+															<img alt="Colaboradores" src="/./administrator/components/com_p22evento/images/inscritos.png"><span>Colaboradores</span>
 														</a>
 													</div>
 												</div>
@@ -90,7 +90,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 												<div style="float: left;">
 													<div class="icon">
 														<a href="<?php echo JRoute::_('index.php?option=com_p22evento&task=gradeprogramacao&idevento='.$this->idevento.'&Itemid='. JRequest::getInt('Itemid') ); ?>">
-															<img alt="Programação" src="./administrator/components/com_p22evento/images/grade_palestras.png"><span>Programação</span>
+															<img alt="Programação" src="/./administrator/components/com_p22evento/images/grade_palestras.png"><span>Programação</span>
 														</a>
 													</div>
 												</div>
@@ -99,7 +99,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 												<div style="float: left;">
 													<div class="icon">
 														<a href="<?php echo JRoute::_('index.php?option=com_p22evento&task=avaliacao&idevento='.$this->idevento.'&Itemid='. JRequest::getInt('Itemid') ); ?>">
-															<img alt="Avaliação" src="./administrator/components/com_p22evento/images/avaliacao.png"><span>Avaliação</span>
+															<img alt="Avaliação" src="/./administrator/components/com_p22evento/images/avaliacao.png"><span>Avaliação</span>
 														</a>
 													</div>
 												</div>
@@ -108,7 +108,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 												<div style="float: left;">
 													<div class="icon">
 														<a href="<?php echo JRoute::_('index.php?option=com_p22evento&task=palestra&idevento='.$this->idevento.'&Itemid='. JRequest::getInt('Itemid') ); ?>">
-															<img alt="Submeter Trabalho" src="./administrator/components/com_p22evento/images/palestras.png"><span>Submissão de<br /> Trabalho</span>
+															<img alt="Submeter Trabalho" src="/./administrator/components/com_p22evento/images/palestras.png"><span>Submissão de<br /> Trabalho</span>
 														</a>
 													</div>
 												</div>
@@ -117,7 +117,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 												<div style="float: left;">
 													<div class="icon">
 														<a href="<?php echo JRoute::_('index.php?option=com_p22evento&task=palestrantes&idevento='.$this->idevento.'&Itemid='. JRequest::getInt('Itemid') ); ?>">
-															<img alt="Palestrantes" src="./administrator/components/com_p22evento/images/palestrantes.png"><span>Palestrantes</span>
+															<img alt="Palestrantes" src="/./administrator/components/com_p22evento/images/palestrantes.png"><span>Palestrantes</span>
 														</a>
 													</div>
 												</div>
@@ -125,7 +125,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 												<div style="float: left;">
 													<div class="icon">
 														<a href="<?php echo JRoute::_('index.php?option=com_p22evento&task=certvalidate&Itemid='. JRequest::getInt('Itemid') ); ?>">
-															<img alt="Validação de Certificados" src="./administrator/components/com_p22evento/images/certificados.png"><span>Validação de <br />Certificados</span>
+															<img alt="Validação de Certificados" src="/./administrator/components/com_p22evento/images/certificados.png"><span>Validação de <br />Certificados</span>
 														</a>
 													</div>
 												</div>

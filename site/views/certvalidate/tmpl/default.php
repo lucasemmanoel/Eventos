@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 <style type="text/css">
-	.icon-48-p22Certificado{ background-image: url('administrator/components/com_p22evento/images/certificados.png') }
+	.icon-48-p22Certificado{ background-image: url('/./administrator/components/com_p22evento/images/certificados.png') }
 </style>
 <script type="text/javascript">
 function checkCert()

@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 <style type="text/css">
-	.icon-48-p22Certificado{ background-image: url('administrator/components/com_p22evento/images/certificados.png') }
+	.icon-48-p22Certificado{ background-image: url('/./administrator/components/com_p22evento/images/certificados.png') }
 </style>
 <?php if ( $this->safe ) : ?>
 <div class="padding" style="width:99%;margin-left:auto;margin-right: auto;margin-top:5px">
@@ -112,7 +112,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	</div>
 </div>
 <?php else: ?>
-<div style="<?php echo $this->style; ?>;margin-left:auto;margin-right:auto;margin-top:20px">
+<div style="<?php echo $this->style; ?>;margin-left:auto;margin-right:auto;margin-top:20px;color:#333">
 	<div style="<?php echo $this->style3; ?>"></div>
 	<div style="<?php echo $this->style2; ?>">
 		<img src="<?php echo $this->filepath; ?>" alt="" />

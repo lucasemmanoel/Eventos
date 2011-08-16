@@ -271,7 +271,7 @@ class P22eventosModelPalestrante extends JModel
 				continue;
 			}
 
-			$query	= 'DELETE FROM #__p22eventos_inscritos WHERE id_evento='. intval( $this->idevento ) .' AND id_participante='. inval( $cid ) .' AND tp_reg=2';
+			$query	= 'DELETE FROM #__p22eventos_inscritos WHERE id_evento='. intval( $this->idevento ) .' AND id_participante='. intval( $cid ) .' AND tp_reg=2';
 
 			$this->_db->setQuery( $query );
 

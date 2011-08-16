@@ -84,7 +84,7 @@ class P22eventosModelP22eventos extends JModel
 			. ' ( SELECT COUNT(a.id) FROM #__p22eventos_avaliacao AS a WHERE a.id_evento = p.id_evento AND p.id = a.id_palestra AND a.id_avaliador = '. intval( $this->id ) .' ) AS avaliado'
 			. ' FROM #__p22eventos_palestras AS p'
 			. ' INNER JOIN #__p22eventos AS e ON e.id = p.id_evento'
-			. ' WHERE p.id_evento IN ('. implode(',' , $avaliador_eventos ) .') AND p.aprovado=0'
+			. ' WHERE p.id_evento IN ('. implode(',' , $avaliador_eventos ) .') AND p.published=1 AND p.aprovado=0'
 			. ' ORDER BY p.nome'
 			;
 			$palestras = $this->lib->getRegistrosCustom( $query );
@@ -222,7 +222,7 @@ class P22eventosModelP22eventos extends JModel
 	public function getPalestras()
 	{
 		$query = 'SELECT p.id,p.id_evento,p.nome,e.nome AS evento,e.ano,e.certificados,'
-		. ' ( SELECT t.nome FROM #__p22eventos_trilhas AS t WHERE t.id = p.id_trilha ) AS trilha,'
+		. ' ( SELECT t.nome FROM #__p22eventos_trilhas AS t WHERE t.id = p.id_trilha ) AS trilha'
 		. ' FROM #__p22eventos_palestras AS p'
 		. ' INNER JOIN #__p22eventos_participantes AS pp ON pp.id = p.id_palestrante'
 		. ' INNER JOIN #__p22eventos AS e ON e.id = p.id_evento'
@@ -230,7 +230,7 @@ class P22eventosModelP22eventos extends JModel
 		;
 		$this->_db->setQuery( $query );
 		$result = $this->_db->loadObjectList();
-
+		
 		$palestras = array();
 		for( $c = 0 ; $c < count( $result ) ; $c++ )
 		{
@@ -238,7 +238,7 @@ class P22eventosModelP22eventos extends JModel
 			$row->periodo	= $this->lib->getEventDetailString( $row->id_evento , false );
 			$palestras[]	= $row;
 		}
-		
+
 		return $palestras;
 	}
 }

@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 <style type="text/css">
-	.icon-48-p22Palestras{ background-image: url('administrator/components/com_p22evento/images/palestras.png') }
+	.icon-48-p22Palestras{ background-image: url('/./administrator/components/com_p22evento/images/palestras.png') }
 </style>
 <div style="width:82%">
 	<div id="toolbar-box">
@@ -44,7 +44,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 								</a>
 							</td>
 							<td id="toolbar-new" class="button">
-								<a class="toolbar" onclick="javascript:window.location.href='<?php echo JRoute::_( 'index2.php?option=com_p22evento&task=palestra&idevento='. intval( $this->idevento ) .'&palestraid='. intval( $row->id ) .'&Itemid=' . JRequest::getInt('Itemid') ); ?>'" href="#">
+								<a class="toolbar" onclick="" href="javascript:window.location.href='<?php echo JRoute::_( 'index.php?option=com_p22evento&task=palestra&tmpl=component&idevento='. intval( $this->idevento ) .'&palestraid='. intval( $row->id ) .'&Itemid=' . JRequest::getInt('Itemid') ); ?>'">
 									<span title="Novo" class="icon-32-new"></span>
 									Novo
 								</a>

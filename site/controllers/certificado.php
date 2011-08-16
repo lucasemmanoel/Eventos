@@ -150,6 +150,12 @@ class P22eventosControllerCertificado extends P22eventosController
 		}
 
 		$link = 'index2.php?option=com_p22evento&task=certificado&cert='. intval( $data['tp_reg'] ) .'&idevento=' . intval( $data['idevento'] );
+
+		if ( $data['id_palestra'] )
+		{
+			$link .= '&palestraid=' . intval( $data['id_palestra'] );
+		}
+
 		$this->setRedirect( $link, $msg , $msgType );	
 	}
 

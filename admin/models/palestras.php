@@ -80,7 +80,7 @@ class P22eventosModelPalestras extends JModel
 			. ' ( SELECT t.nome FROM #__p22eventos_trilhas AS t WHERE t.id = p.id_trilha ) AS trilha,'
 			. ' ( SELECT tt.cor FROM #__p22eventos_trilhas AS tt WHERE tt.id = p.id_trilha ) AS cor'
 			. ' FROM #__p22eventos_palestras AS p'
-			. ' INNER JOIN #__p22eventos_participantes AS pp ON pp.id = p.id_palestrante'
+			. ' LEFT JOIN #__p22eventos_participantes AS pp ON pp.id = p.id_palestrante'
 			. $where
 			. $orderby
 			;
@@ -88,6 +88,7 @@ class P22eventosModelPalestras extends JModel
 			$this->_db->setQuery( $query, $pageNav->limitstart, $pageNav->limit );
 			$this->_registros = $this->_db->loadObjectList();
 		}
+		
 		return $this->_registros;
 	}
 

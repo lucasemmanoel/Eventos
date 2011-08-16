@@ -51,12 +51,12 @@ class P22eventosViewCertificado extends JView
 		$registro	= &$this->get('Registro');
 		$safe		= $this->get('CertificadoGerado');
 		$palestra	= $this->get('Palestra');
-
+		
 		jimport( 'joomla.filesystem.file' );
 
 		$img		= JPATH::clean( JPATH_SITE . DS . 'images'. DS .'stories'. DS  .'eventos'. DS . $registro->eventalias . DS .'certificados'. DS . $registro->image_name );
 		$fileExists = JFile::exists( $img );
-
+		
 		if ( !$safe && $registro->eventalias && $registro->image_name && $fileExists )
 		{
 			$img			= JPATH::clean( JPATH_SITE . DS . 'images'. DS .'stories'. DS  .'eventos'. DS . $registro->eventalias . DS .'certificados'. DS . $registro->image_name );
@@ -80,14 +80,13 @@ class P22eventosViewCertificado extends JView
 					break;
 				default:
 					$tipo = 'participante';
-					$view = 'participantes';
+					$view = 'inscritos';
 					break;
 			}
 
 			$periodo		= $model->lib->getEventDetailString( $registro->id_evento );
 			$text			= ( !$view ) ? 'texto_inscritos' : 'texto_' . $view;
 			$maintext		= $registro->$text;
-
 			
 			preg_match( "/[COLOR]?(([a-fA-F0-9]){3}){1,2}/" , $maintext , $matches );
 			if ( count( $matches ) )

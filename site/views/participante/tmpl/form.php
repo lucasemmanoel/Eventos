@@ -43,7 +43,7 @@ $blog_w			= ( !empty( $this->registro->site ) ) ? -13 : -235;
 $blog_h			= -273;
 ?>
 <style type="text/css">
-.icon-48-p22Inscritos{ background-image: url('administrator/components/com_p22evento/images/inscritos.png') }
+.icon-48-p22Inscritos{ background-image: url('/./administrator/components/com_p22evento/images/inscritos.png') }
 #system-message dt { display: none; }
 dd.notice , dd.error , dd.message{ margin-left: 0px; }
 dd.notice ul, dd.error ul, dd.message ul { padding: 9px !important; }
@@ -236,7 +236,7 @@ dd.notice ul li, dd.error ul li, dd.message ul li { list-style: none; margin-lef
 										</select>
 									</div>
 									<div style="float:left;margin-left: 10px;visibility:hidden" id="loader_cidades">
-										<img src="./administrator/components/com_p22evento/images/loader.gif" alt="" />
+										<img src="/./administrator/components/com_p22evento/images/loader.gif" alt="" />
 									</div>
 									<div style="clear:both"></div>
 								</td>
@@ -257,7 +257,7 @@ dd.notice ul li, dd.error ul li, dd.message ul li { list-style: none; margin-lef
 										</a>
 									</div>
 									<div style="float: left; margin-left: 8px;visibility: hidden" id="loader_profissao">
-										<img src="./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
+										<img src="/./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
 									</div>
 									<div class="clr"></div>
 								</td>
@@ -283,7 +283,7 @@ dd.notice ul li, dd.error ul li, dd.message ul li { list-style: none; margin-lef
 								<td>
 									<input class="inputbox" type="text" name="orkut"
 								   id="orkut" size="30" maxlength="150" value="<?php echo $this->registro->orkut; ?>" />
-								   <img src="./components/com_p22evento/assets/images/information.png" alt="" title="Somente o UID. Exemplo: no http://www.orkut.com.br/Main#Profile?uid=16703771483943557407, informar apenas 16703771483943557407." style="position:relative;top:3px" />
+								   <img src="/./components/com_p22evento/assets/images/information.png" alt="" title="Somente o UID. Exemplo: no http://www.orkut.com.br/Main#Profile?uid=16703771483943557407, informar apenas 16703771483943557407." style="position:relative;top:3px" />
 								</td>
 							</tr>
 							<tr>
@@ -295,7 +295,7 @@ dd.notice ul li, dd.error ul li, dd.message ul li { list-style: none; margin-lef
 								<td>
 									<input class="inputbox" type="text" name="youtube"
 								   id="youtube" size="30" maxlength="150" value="<?php echo $this->registro->youtube; ?>" />
-								   <img src="./components/com_p22evento/assets/images/information.png" alt="" title="Link completo." style="position:relative;top:3px" />
+								   <img src="/./components/com_p22evento/assets/images/information.png" alt="" title="Link completo." style="position:relative;top:3px" />
 								</td>
 							</tr>
 							<tr>
@@ -307,7 +307,7 @@ dd.notice ul li, dd.error ul li, dd.message ul li { list-style: none; margin-lef
 								<td>
 									<input class="inputbox" type="text" name="site"
 								   id="site" size="30" maxlength="150" value="<?php echo $this->registro->site; ?>" />
-								   <img src="./components/com_p22evento/assets/images/information.png" alt="" title="Link completo." style="position:relative;top:3px" />
+								   <img src="/./components/com_p22evento/assets/images/information.png" alt="" title="Link completo." style="position:relative;top:3px" />
 								</td>
 							</tr>
 							<tr>
@@ -318,7 +318,7 @@ dd.notice ul li, dd.error ul li, dd.message ul li { list-style: none; margin-lef
 								</td>
 								<td>
 									<textarea name="curriculo" id="curriculo" rows="5" cols="48"><?php echo $this->registro->curriculo; ?></textarea>
-								   <img src="./components/com_p22evento/assets/images/information.png" alt="" title="Mini-currículo tem de ser curto e objetivo." style="position:relative;top:3px" />
+								   <img src="/./components/com_p22evento/assets/images/information.png" alt="" title="Mini-currículo tem de ser curto e objetivo." style="position:relative;top:3px" />
 								</td>
 							</tr>
 							

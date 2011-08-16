@@ -40,14 +40,14 @@ class P22eventosViewCertificadovisual extends JView
 
 		JToolBarHelper::title( $titulo , 'p22Certificados' );
 		$registro	= $model->getRegistro();
-
+		
 		JToolBarHelper::custom( 'apply_certificado', 'apply', 'apply_f2', 'Apply' , false );
 
 		jimport( 'joomla.filesystem.file' );
 
 		$img		= JPATH::clean( JPATH_SITE . DS . 'images'. DS .'stories'. DS  .'eventos'. DS . $registro->eventalias . DS .'certificados'. DS . $registro->image_name );
 		$fileExists = JFile::exists( $img );
-		
+	
 		if ( $registro->eventalias && $registro->image_name && $fileExists )
 		{
 			$modelAvatar	= &JModel::getInstance( 'avatar' , 'P22eventosModel' );
@@ -94,7 +94,7 @@ class P22eventosViewCertificadovisual extends JView
 				$maintext	= str_replace( "[COLOR={$color}]" , "<font style='color:#{$color}'>" , $maintext );
 				$maintext	= str_replace( "[/COLOR]" , '</font>' , $maintext );
 			}
-
+			
 			// Prepara os dados para o template.
 			$this->assignRef( 'idevento', $idevento );
 			$this->assignRef( 'registro', $registro );

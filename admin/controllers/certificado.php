@@ -71,7 +71,7 @@ class P22eventosControllerCertificado extends P22eventosController
 		}
 		else
 		{
-			$query		= "INSERT INTO ". $db->nameQuote( '#__p22eventos_certificados' ) ." (id_vento, eventalias, image_name, texto_inscritos, texto_colaboradores, texto_palestrantes,font_size, cpf_font_size,num_font_size) VALUES ( {$data['id_evento']}, {$data['eventalias']}, {$data['image_name']}, {$data['texto_inscritos']}, {$data['texto_colaboradores']}, {$data['texto_palestrantes']} , 12,12,12 ) ";
+			$query		= "INSERT INTO ". $db->nameQuote( '#__p22eventos_certificados' ) ." (id_evento, eventalias, image_name, texto_inscritos, texto_colaboradores, texto_palestrantes,font_size, cpf_font_size,num_font_size) VALUES ( {$data['id_evento']}, {$data['eventalias']}, {$data['image_name']}, {$data['texto_inscritos']}, {$data['texto_colaboradores']}, {$data['texto_palestrantes']} , 12,12,12 ) ";
 			$msg		= 'inserir';
 			$success	= 'inseridos';
 		}

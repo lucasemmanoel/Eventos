@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 <style type="text/css">
-	.icon-48-p22Eventos{ background-image: url('administrator/components/com_p22evento/images/eventos.png') }
+	.icon-48-p22Eventos{ background-image: url('/./administrator/components/com_p22evento/images/eventos.png') }
 </style>
 <div class="padding" style="width:99%;margin-left:auto;margin-right: auto;margin-top:5px">
 	<div id="toolbar-box">
@@ -79,13 +79,13 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				{
 					$row = &$this->registros[$i];
 					$seImgExists	= ( $row->avatar_img ) ? file_exists( JPATH_SITE . DS . $row->avatar_img ) : false;
-					$avatar_img		= ( $seImgExists ) ? './' . $row->avatar_img : './administrator/components/com_p22evento/images/no_picture.jpg';
+					$avatar_img		= ( $seImgExists ) ? '/./' . $row->avatar_img : '/./administrator/components/com_p22evento/images/no_picture.jpg';
 					?>
 					<div style="padding:5px;border-bottom:1px dotted #DDD">
 						<div style="float:left">
 							<img src="<?php echo $avatar_img; ?>" alt="" />
 						</div>
-						<div style="float:left;margin-left:3px">
+						<div style="float:left;margin-left:3px;width: 359px">
 							<div style="float:left;clear:right;padding:10px;border-bottom:1px solid #DDD;width:100%">
 								<div style="font-size: 16px;color:#333;font-weight: bold">
 									<a href="<?php echo JRoute::_( JURI::base() . 'index.php?option=com_p22evento&pid=' . intval( $row->id_palestrante ) ); ?>">

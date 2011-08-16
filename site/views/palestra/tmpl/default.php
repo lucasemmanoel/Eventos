@@ -246,7 +246,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 	}
 </script>
 <style type="text/css">
-	.icon-48-p22Inscritos{ background-image: url('administrator/components/com_p22evento/images/inscritos.png') }
+	.icon-48-p22Inscritos{ background-image: url('/./administrator/components/com_p22evento/images/inscritos.png') }
 </style>
 <div class="padding" style="width:<?php echo ( JREquest::getCmd('tmpl') ) ? 82 : 99; ?>%;margin-top:5px">
 	<?php if ( !$tmpl ) : ?>
@@ -343,7 +343,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 											</a>
 										</div>
 										<div style="float: left; margin-left: 8px;visibility: hidden" id="loader_email">
-											<img src="./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
+											<img src="/./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
 										</div>
 										<div class="clr"></div>
 									</td>
@@ -365,7 +365,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 											</a>
 										</div>
 										<div style="float: left; margin-left: 8px;visibility: hidden" id="loader_cpf">
-											<img src="./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
+											<img src="/./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
 										</div>
 										<div class="clr"></div>
 									</td>
@@ -398,7 +398,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 											</a>
 										</div>
 										<div style="float: left; margin-left: 8px;visibility: hidden" id="loader_username">
-											<img src="./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
+											<img src="/./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
 										</div>
 										<div class="clr"></div>
 									</td>
@@ -448,7 +448,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 											</select>
 										</div>
 										<div style="float:left;margin-left: 10px;visibility:hidden" id="loader_cidades">
-											<img src="./administrator/components/com_p22evento/images/loader.gif" alt="" />
+											<img src="/./administrator/components/com_p22evento/images/loader.gif" alt="" />
 										</div>
 										<div style="clear:both"></div>
 									</td>
@@ -469,7 +469,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 											</a>
 										</div>
 										<div style="float: left; margin-left: 8px;visibility: hidden" id="loader_profissao">
-											<img src="./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
+											<img src="/./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
 										</div>
 										<div class="clr"></div>
 									</td>
@@ -597,7 +597,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 												</a>
 											</div>
 											<div style="float: left; margin-left: 8px;visibility:hidden" id="loader_cpf">
-												<img src="./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
+												<img src="/./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
 											</div>
 											<div class="clr"></div>
 										</td>
@@ -625,7 +625,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 												</select>
 											</div>
 											<div style="float:left;margin-left: 10px;visibility:hidden" id="loader_cidades">
-												<img src="./administrator/components/com_p22evento/images/loader.gif" alt="" />
+												<img src="/./administrator/components/com_p22evento/images/loader.gif" alt="" />
 											</div>
 											<div style="clear:both"></div>
 										</td>
@@ -646,7 +646,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 												</a>
 											</div>
 											<div style="float: left; margin-left: 8px;visibility: hidden" id="loader_profissao">
-												<img src="./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
+												<img src="/./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
 											</div>
 											<div class="clr"></div>
 										</td>
@@ -691,7 +691,7 @@ $tmpl = ( $tmpl == 'component' ) ? true : false;
 												<button class="button" id="subscribe_button" type="button" onclick="subscribeUser('<?php echo $this->idevento; ?>')"><?php echo JText::_('Confirmar'); ?></button>
 											</div>
 											<div style="float: left; margin-left: 8px;visibility: hidden" id="loader_subscribe">
-												<img src="./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
+												<img src="/./administrator/components/com_p22evento/images/load.gif" alt="" border="0" />
 											</div>
 											<div class="clr"></div>
 										</td>
